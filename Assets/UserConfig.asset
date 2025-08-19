@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c61ec0ae37c4674a825119d8b6ba439, type: 3}
+  m_Name: UserConfig
+  m_EditorClassIdentifier: 
+  userEmail: example@mail.com
+  logsFile: logs.txt
+  lockedProtocolFile: locked_files.json
+  diffPrefabsParentDirectory: Assets/
+  diffPrefabsDirName: DiffObjects_as_Prefabs/
+  versionControlledAssets: Assets/VersionControlledAssets/
+  gitBashExe: C:\Program Files\Git\git-bash.exe
+  defaultBranchName: master
+  remoteUrl: Paste the http link for your empty repository.
+  allowCommitFile: .allow_commit
+  setupGitHookFile: setup_git_hook_asset_validation.sh
+  useFileLocking: 0
+  useAssetVCS: 0

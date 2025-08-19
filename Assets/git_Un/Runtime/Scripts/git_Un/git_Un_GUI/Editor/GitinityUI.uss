@@ -1,0 +1,99 @@
+.custom-label {
+    font-size: 20px;
+    -unity-font-style: bold;
+    color: rgb(68, 138, 255);
+}
+
+.hidden{
+    display: none;
+}
+.warning {
+    font-size: 18px;
+    background-color: rgb(142, 34, 34);
+    color: black;
+    -unity-font-style: bold;
+    height: 50px;
+    
+}
+
+.header{
+    font-size: 18px;
+    -unity-font-style: bold;
+    color: rgb(68, 138, 255);
+}
+
+.user{
+    font-size: 14px;
+    -unity-font-style: bold;
+}
+VisualElement {
+    margin: 8px 0;
+    padding: 4px;
+}
+
+Button {
+    background-color: #174562;
+    border-radius: 6px;
+    padding: 8px 16px;
+    color: white;
+    transition: all 0.2s ease;
+}
+
+Label {
+    font-size: 14px;
+}
+
+/* Layout Utilities */
+.flex-row {
+    flex-direction: row;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+.pull-right {
+    margin-left: auto;
+}
+
+.pull-right-field{
+    margin-left: 50px;
+}
+
+
+.doc-button {
+    background-color: transparent;
+    color: #337ab7;
+    font-size: 12px;
+    text-decoration: underline;
+    align-self: flex-start;
+}
+    
+
+.status-row {
+    flex-direction: row;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 6px;
+    padding: 6px 10px;
+    background-color: #1e1e1e;
+    border-radius: 6px;
+    border: 1px solid #444;
+    gap: 8px; /* gap between label and value */
+}
+
+.status-label {
+    font-size: 13px;
+    color: #cccccc;
+    font-weight: bold;
+}
+
+.status-value {
+    font-size: 13px;
+    color: #bdbdbd; /* light blue, good for status */
+    font-style: italic;
+}
