@@ -35,8 +35,17 @@ public class SetupUI : EditorWindow
         UserEmail.RegisterValueChangedCallback(UpdateUser);
 
         GitExe.SetValueWithoutNotify(GlobalRefs.filePaths.gitBashExe);
+        GitExe.RegisterValueChangedCallback(evt =>
+        {
+            GlobalRefs.filePaths.gitBashExe = evt.newValue;
+            GlobalRefs.filePaths.Save();
+        });
         DefaultBranch.SetValueWithoutNotify(GlobalRefs.filePaths.defaultBranchName);
-        DefaultBranch.RegisterValueChangedCallback(evt => GlobalRefs.filePaths.defaultBranchName = evt.newValue);
+        DefaultBranch.RegisterValueChangedCallback(evt =>
+        {
+            GlobalRefs.filePaths.defaultBranchName = evt.newValue;
+            GlobalRefs.filePaths.Save();
+        });
         RemoteLink.RegisterValueChangedCallback(UpdateRemoteLink);
 
         RemoteLink.SetValueWithoutNotify(GlobalRefs.filePaths.remoteUrl);
@@ -51,6 +60,7 @@ public class SetupUI : EditorWindow
         UseAssetVCS.RegisterValueChangedCallback(evt =>
         {
             GlobalRefs.filePaths.useAssetVCS = evt.newValue;
+            GlobalRefs.filePaths.Save();
             GitinityUI.FireOnActivateAssetVCS(evt.newValue);
         });
 
@@ -71,18 +81,21 @@ public class SetupUI : EditorWindow
     private void UpdateRemoteLink(ChangeEvent<string> evt)
     {
         GlobalRefs.filePaths.remoteUrl = evt.newValue;
+        GlobalRefs.filePaths.Save();
         Debug.Log($"Updated remote url to: {GlobalRefs.filePaths.remoteUrl}");
     }
 
     private void UpdateDiffPath(ChangeEvent<string> evt)
     {
         GlobalRefs.filePaths.diffPrefabsDirName = evt.newValue;
+        GlobalRefs.filePaths.Save();
         Debug.Log($"Updated Diff Prefabs path to: {GlobalRefs.filePaths.DiffPrefabsDirectory}");
     }
 
     private void UpdateUser(ChangeEvent<string> evt)
     {
         GlobalRefs.filePaths.userEmail = evt.newValue;
+        GlobalRefs.filePaths.Save();
         Debug.Log($"Updated user email to: {GlobalRefs.filePaths.userEmail}");
     }
 

@@ -1,11 +1,10 @@
-using System.IO;
 using UnityEngine;
 using UnityEditor;
-using UnityEngine.Serialization;
 
 public class UserConfig : ScriptableObject
 {
     private static string assetName => nameof(UserConfig);
+    private const string AssetPath = "Assets/UserConfig.asset";
 
     private static UserConfig _instance;
 
@@ -14,10 +13,24 @@ public class UserConfig : ScriptableObject
         get
         {
             if (_instance != null) return _instance;
+
+            _instance = AssetDatabase.LoadAssetAtPath<UserConfig>(AssetPath);
+            if (_instance != null)
+            {
+                return _instance;
+            }
+
             _instance = CreateInstance<UserConfig>();
-            AssetDatabase.CreateAsset(_instance, $"Assets/{assetName}.asset");
+            AssetDatabase.CreateAsset(_instance, AssetPath);
+            AssetDatabase.SaveAssets();
             return _instance;
         }
+    }
+
+    public void Save()
+    {
+        EditorUtility.SetDirty(this);
+        AssetDatabase.SaveAssets();
     }
 
     public string userEmail = "example@mail.com";
