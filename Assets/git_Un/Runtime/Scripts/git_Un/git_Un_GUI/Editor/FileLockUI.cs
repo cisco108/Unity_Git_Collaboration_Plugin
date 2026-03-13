@@ -59,7 +59,11 @@ public class FileLockUI : EditorWindow
 
 
         UseFileLocking.SetValueWithoutNotify(GlobalRefs.filePaths.useFileLocking);
-        UseFileLocking.RegisterValueChangedCallback(evt => GlobalRefs.filePaths.useFileLocking = evt.newValue);
+        UseFileLocking.RegisterValueChangedCallback(evt =>
+        {
+            GlobalRefs.filePaths.useFileLocking = evt.newValue;
+            GlobalRefs.filePaths.Save();
+        });
         LockFile.RegisterValueChangedCallback(UpdateLockFile);
         
         DocsButton.clicked += () => { Application.OpenURL("https://free-elective-docu-5e29a0.h-da.io/file_locking/"); };
