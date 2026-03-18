@@ -3,8 +3,8 @@ using UnityEditor;
 
 public class UserConfig : ScriptableObject
 {
-    private static string assetName => nameof(UserConfig);
-    private const string AssetPath = "Assets/UserConfig.asset";
+    private static string assetName = "GitinityUserConfig";
+    private const string AssetPath = "Assets/GitinityUserConfig.asset";
 
     private static UserConfig _instance;
 
@@ -33,20 +33,20 @@ public class UserConfig : ScriptableObject
         AssetDatabase.SaveAssets();
     }
 
-    public string userEmail = "example@mail.com";
-    public string logsFile = "logs.txt";
-    public string lockedProtocolFile = "locked_files.json";
-    public string diffPrefabsParentDirectory = "Assets/";
-    public string diffPrefabsDirName = "DiffObjects_as_Prefabs/";
-    public string versionControlledAssets = "Assets/VersionControlledAssets/";
+    [HideInInspector] public string userEmail = "example@mail.com";
+    [HideInInspector] public string logsFile = "logs.txt";
+    [HideInInspector] public string lockedProtocolFile = "locked_files.json";
+    [HideInInspector] public string diffPrefabsParentDirectory = "Assets/";
+    [HideInInspector] public string diffPrefabsDirName = "DiffObjects_as_Prefabs/";
+    [HideInInspector] public string versionControlledAssets = "Assets/VersionControlledAssets/";
     public string DiffPrefabsDirectory => diffPrefabsParentDirectory + diffPrefabsDirName;
-    public string gitBashExe = @"C:\Program Files\Git\git-bash.exe";
-    public string defaultBranchName = "master";
-    public string remoteUrl = "Paste the http link for your empty repository.";
-    public string allowCommitFile = ".allow_commit";
-    public string setupGitHookFile = "setup_git_hook_asset_validation.sh";
+    [HideInInspector] public string gitBashExe = @"C:\Program Files\Git\git-bash.exe";
+    [HideInInspector] public string defaultBranchName = "master";
+    [HideInInspector] public string remoteUrl = "Paste the http link for your empty repository.";
+    [HideInInspector] public string allowCommitFile = ".allow_commit";
+    [HideInInspector] public string setupGitHookFile = "setup_git_hook_asset_validation.sh";
 
-    public bool useFileLocking = false;
-    public bool useAssetVCS = false;
+    [HideInInspector] public bool useFileLocking = false;
+    [HideInInspector] public bool useAssetVCS = false;
     // public string fileToLockName = "This file will the locked!";
 }
