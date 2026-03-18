@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5c61ec0ae37c4674a825119d8b6ba439, type: 3}
-  m_Name: UserConfig
+  m_Name: GitinityUserConfig
   m_EditorClassIdentifier: 250206_improve_scene_merge::UserConfig
   userEmail: example@mail.com
   logsFile: logs.txt
@@ -18,7 +18,6 @@ MonoBehaviour:
   diffPrefabsParentDirectory: Assets/
   diffPrefabsDirName: DiffObjects_as_Prefabs/
   versionControlledAssets: Assets/VersionControlledAssets/
-  gitBashExe: C:\Program Files\Git\git-bash.exe
   defaultBranchName: master
   remoteUrl: Paste the http link for your empty repository.
   allowCommitFile: .allow_commit
