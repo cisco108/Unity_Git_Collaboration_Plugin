@@ -35,9 +35,30 @@ public static class GitUnMain
         GitinityUI.OnUnlockFile += _fileLocking.UnlockFile;
         GitinityUI.OnActivateAssetVCS += AssetVCSSetActive;
         
+        GitinityUI.OnCommit += Commit;
+        GitinityUI.OnPush += Push;
+        GitinityUI.OnPull += Pull;
+        
         OnGetGitData();
         // for testing in development project:
         // AssetVCSSetActive(true);
+    }
+    
+    private static void Commit(string message)
+    {
+        string commitCmd = _commandBuilder.GetCommit(".", message);
+        _terminal.Execute(commitCmd);
+    }
+    
+    private static void Push()
+    {
+        string pushCmd = _commandBuilder.GetPush();
+        _terminal.Execute(pushCmd);
+    }
+
+    private static void Pull()
+    {
+        _terminal.Execute(GitCommands.pull);
     }
     
     private static void AssetVCSSetActive(bool state)
