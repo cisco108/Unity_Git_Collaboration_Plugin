@@ -119,14 +119,14 @@ public class GitBashInterface : ITerminalInterface
             gitProcess.StartInfo.FileName = GlobalRefs.filePaths.gitBashExe;
             gitProcess.StartInfo.WorkingDirectory = Directory.GetCurrentDirectory();
 
-            string outputPath = Path.Combine(Directory.GetCurrentDirectory(), $"\\{outputFileNameWithType}");
+            string outputPath = Path.Combine(Directory.GetCurrentDirectory(), outputFileNameWithType);
 
-            if (File.Exists(SavedDiff))
+            if (File.Exists(outputPath))
             {
-                File.Delete(SavedDiff);
+                File.Delete(outputPath);
             }
 
-            gitProcess.StartInfo.Arguments = $"-c \"{command} >> {outputPath}\"";
+            gitProcess.StartInfo.Arguments = $"-c \"{command} >> '{outputPath}'\"";
 
             // Debug.Log(gitProcess.StartInfo.Arguments);
             gitProcess.StartInfo.UseShellExecute = false;
