@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<engine:UXML
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:engine="UnityEngine.UIElements"
+        xsi:noNamespaceSchemaLocation="../../../../../../../../UIElementsSchema/UIElements.xsd"
+>
+    <Style src="project://database/Assets/git_Un/Runtime/Scripts/git_Un/git_Un_GUI/Editor/GitinityUI.uss?fileID=7433441132597879392&amp;guid=45dc2e453a1151e4081c4deb8344100b&amp;type=3#GitinityUI" />
+
+    <engine:Label text="Basic Git Commands" class="header"/>
+    <engine:VisualElement style="height: 20px;" />
+    
+    <engine:Label text="1. Save your changes locally" class="subheader" style="font-weight: bold; margin-bottom: 5px;"/>
+    <engine:Label text="This takes all the files you changed and saves them locally with the message you provide below." style="white-space: normal; margin-bottom: 10px; color: #a0a0a0;"/>
+    <engine:TextField label="Message:" name="commit-message" tooltip="Enter a short description of what you changed."/>
+    <engine:Button name="commit-btn" text="Make Commit" class="action-btn" style="margin-top: 5px;"/>
+    
+    <engine:VisualElement style="height: 30px;" />
+    
+    <engine:Label text="2. Upload your changes to the server" class="subheader" style="font-weight: bold; margin-bottom: 5px;"/>
+    <engine:Label text="This pushes all your locally saved commits up to the remote server so others can see them." style="white-space: normal; margin-bottom: 10px; color: #a0a0a0;"/>
+    <engine:Button name="push-btn" text="Push Changes" class="action-btn"/>
+    
+    <engine:VisualElement style="height: 30px;" />
+
+    <engine:Label text="3. Download changes from the server" class="subheader" style="font-weight: bold; margin-bottom: 5px;"/>
+    <engine:Label text="This brings down any new changes that other people have pushed to the server and updates your local files." style="white-space: normal; margin-bottom: 10px; color: #a0a0a0;"/>
+    <engine:Button name="pull-btn" text="Pull Changes" class="action-btn"/>
+
+</engine:UXML>
