@@ -56,6 +56,8 @@ public static class GitUnMain
 
         
         _assetVCS.isActive = state;
+        GlobalRefs.filePaths.useAssetVCS = state;
+        GlobalRefs.filePaths.Save();
     }
 
     private static void SetupGitinity()

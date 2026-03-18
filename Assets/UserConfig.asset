@@ -11,7 +11,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5c61ec0ae37c4674a825119d8b6ba439, type: 3}
   m_Name: UserConfig
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier: 250206_improve_scene_merge::UserConfig
   userEmail: example@mail.com
   logsFile: logs.txt
   lockedProtocolFile: locked_files.json

@@ -11,24 +11,22 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ba55bc5335364914e9f39135de211575, type: 3}
   m_Name: PackageSettings
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier: Assembly-CSharp::Toph.UnityUtilities.Package.PackageUtility
   domainName: com
   companyName: newhere_tools
   useSettingsCompanyName: 1
   packageName: git_un
   useSettingsProductName: 1
-  version: 0.6.0
+  version: 0.9.0
   useSettingsVersion: 1
   displayName: git_Un
   _useSettingsProductName: 1
   description: 
-  unity: 6000.1
+  unity: 6000.3
   useCurrentUnityVersion: 1
-  unityRelease: 0f1
+  unityRelease: 11f1
   useCurrentUnityRelease: 1
-  _dependencies:
-  - name: com.unity.nuget.newtonsoft-json
-    version: 3.2.1
+  _dependencies: []
   documentationUrl: https://
   changelogUrl: https://
   licensesUrl: 

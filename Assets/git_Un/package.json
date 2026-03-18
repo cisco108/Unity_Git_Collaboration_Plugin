@@ -2,8 +2,8 @@
   "version": "0.9.0",
   "displayName": "git_Un",
   "description": "",
-  "unity": "6000.1",
-  "unityRelease": "0f1",
+  "unity": "6000.3",
+  "unityRelease": "11f1",
   "documentationUrl": "https://",
   "changelogUrl": "https://",
   "licensesUrl": "",
@@ -24,8 +24,6 @@
     "UseSettingsCompanyNameAsName": true
   },
   "name": "com.newhere_tools.git_un",
-  "dependencies": {
-    "com.unity.nuget.newtonsoft-json": "3.2.1"
-  },
+  "dependencies": {},
   "hideFlags": 0
 }
