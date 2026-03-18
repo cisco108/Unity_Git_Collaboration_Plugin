@@ -40,13 +40,27 @@ public class UserConfig : ScriptableObject
     [HideInInspector] public string diffPrefabsDirName = "DiffObjects_as_Prefabs/";
     [HideInInspector] public string versionControlledAssets = "Assets/VersionControlledAssets/";
     public string DiffPrefabsDirectory => diffPrefabsParentDirectory + diffPrefabsDirName;
-    #if UNITY_EDITOR_WIN
-    [HideInInspector] public string gitBashExe = @"C:\Program Files\Git\git-bash.exe";
-#elif UNITY_EDITOR_LINUX
-    [HideInInspector] public string gitBashExe = "/bin/bash";
+
+    private string gitBashExe;
+
+    public void SetBashExe(string path)
+    {
+	gitBashExe = path;
+    } 
+
+    public string GetBashExe() 
+    {
+#if UNITY_EDITOR_WIN
+	gitBashExe = @"C:\Program Files\Git\git-bash.exe";
+	return gitBashExe;
 #else
-    [HideInInspector] public string gitBashExe = "bash";
+	gitBashExe = "bash";
+	return gitBashExe;
 #endif
+    }
+
+
+
     [HideInInspector] public string defaultBranchName = "master";
     [HideInInspector] public string remoteUrl = "Paste the http link for your empty repository.";
     [HideInInspector] public string allowCommitFile = ".allow_commit";

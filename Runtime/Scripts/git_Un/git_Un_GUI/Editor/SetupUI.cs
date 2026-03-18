@@ -34,10 +34,10 @@ public class SetupUI : EditorWindow
         UserEmail.SetValueWithoutNotify(GlobalRefs.filePaths.userEmail);
         UserEmail.RegisterValueChangedCallback(UpdateUser);
 
-        GitExe.SetValueWithoutNotify(GlobalRefs.filePaths.gitBashExe);
+        GitExe.SetValueWithoutNotify(GlobalRefs.filePaths.GetBashExe());
         GitExe.RegisterValueChangedCallback(evt =>
         {
-            GlobalRefs.filePaths.gitBashExe = evt.newValue;
+            GlobalRefs.filePaths.SetBashExe(evt.newValue);
             GlobalRefs.filePaths.Save();
         });
         DefaultBranch.SetValueWithoutNotify(GlobalRefs.filePaths.defaultBranchName);

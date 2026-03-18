@@ -85,7 +85,7 @@ public class GitBashInterface : ITerminalInterface
         try
         {
             using Process gitProcess = new Process();
-            gitProcess.StartInfo.FileName = GlobalRefs.filePaths.gitBashExe;
+            gitProcess.StartInfo.FileName = GlobalRefs.filePaths.GetBashExe();
             gitProcess.StartInfo.WorkingDirectory = Directory.GetCurrentDirectory();
 
 
@@ -116,7 +116,7 @@ public class GitBashInterface : ITerminalInterface
         try
         {
             using Process gitProcess = new Process();
-            gitProcess.StartInfo.FileName = GlobalRefs.filePaths.gitBashExe;
+            gitProcess.StartInfo.FileName = GlobalRefs.filePaths.GetBashExe();
             gitProcess.StartInfo.WorkingDirectory = Directory.GetCurrentDirectory();
 
             string outputPath = Path.Combine(Directory.GetCurrentDirectory(), outputFileNameWithType);
