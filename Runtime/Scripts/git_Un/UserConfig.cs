@@ -51,7 +51,7 @@ public class UserConfig : ScriptableObject
     public string GetBashExe() 
     {
 #if UNITY_EDITOR_WIN
-	gitBashExe = @"C:\Program Files\Git\git-bash.exe";
+	gitBashExe = @"C:\Program Files\Git\bin\bash.exe";
 	return gitBashExe;
 #else
 	gitBashExe = "bash";
