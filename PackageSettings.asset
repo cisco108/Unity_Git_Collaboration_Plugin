@@ -17,7 +17,7 @@ MonoBehaviour:
   useSettingsCompanyName: 1
   packageName: git_un
   useSettingsProductName: 1
-  version: 0.9.0
+  version: 0.9.1
   useSettingsVersion: 1
   displayName: git_Un
   _useSettingsProductName: 1
